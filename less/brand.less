@@ -1,0 +1,184 @@
+@import "px2rem.less";
+@import "commen.less";
+
+.products{
+    background-color: #fff;
+    .list_title{
+        background-color: #eee;
+        padding: 0 20*@base;
+        border-top:1*@base solid #ccc;
+        border-bottom:1*@base solid #ccc;
+        .list_l{
+            float: left;
+            >a{
+                height: 39*@base;
+                display: inline-block;
+                color: #333;
+                line-height:39*@base;
+                font-family: 700; 
+            }
+        }
+        .list_r{
+            float:right;
+            padding:5*@base;
+            >button{
+                height: 29*@base;
+                width: 63*@base;
+                color: #333;
+                line-height:29*@base;
+                font-family: 700;
+                border: 1px solid #ccc;
+                border-radius: 5*@base;
+                outline: none;
+            }
+        }
+    }
+    .pro_items{
+        padding: 10*@base 5*@base;
+        p{
+            height: 40*@base;
+            line-height: 40*@base;
+            background-color: #eee;
+            font-size: 12*@base;
+            color:#7B2700;
+            padding-left: 10*@base;
+            border: 1px solid #ccc;
+        }
+    }
+    .pro_list{
+        .pro_des{
+             padding: 10*@base;
+             border-bottom: 1px solid #ccc;
+            .describe_l{
+                float: left;
+                padding: 10*@base;
+                p{
+                    width: 20*@base;
+                    height: 20*@base;
+                    background-color: red;
+                    text-align: center;
+                    color:#fff;
+                    line-height: 20*@base;
+                    font-size: 12*@base;
+                    font-family: 'simsun';
+                    font-weight: 700;
+                }
+            }
+            .describe_r{
+                overflow: hidden;
+                .describe_r_box{
+                    width: 100%;
+                    padding-left: 5*@base;
+                    .describe_title{
+                        font-size: 12*@base;
+                        color: #333;
+                        line-height: 25*@base;
+                        font-weight: 700;
+                    }
+                    .describe_xl{
+                        font-size: 10*@base;
+                        color: #888;
+                    }
+                }
+                
+            }
+        }
+    }
+} 
+
+.pro_hot{
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    .pro_img{
+    float: left;
+    width: 80*@base;
+    height: 80*@base;
+    img{
+        width: 80*@base;
+        height: 80*@base;
+        display: block;
+    }
+    }
+    .pro_des{
+        overflow: hidden;
+        >a{
+            display: block;
+            width: 100%;
+            padding-left:10*@base;
+            .pro_name{
+                line-height: 25*@base;
+                font-size: 12*@base;
+                color:#333;
+            }
+            .pro_price{
+                margin: 10*@base 0;
+                color:red;
+                font-size: 12*@base;
+            }
+        
+            .pro_time{
+                color: #666;
+                height: 30*@base;
+                position: relative;
+                line-height: 25*@base;
+                font-size: 10*@base;
+                
+                span{
+                    margin-right: 10*@base;
+                }
+            }
+        }
+    }
+}
+
+.comment_products{
+    .new_comment{
+        .pro_com{
+            .pro_img{
+                float: left;
+                width: 80*@base;
+                height: 80*@base;
+                 img{
+                    width: 80*@base;
+                    height: 80*@base;
+                    display: block;
+                }
+            }
+            .pro_des{
+                overflow: hidden;
+                >a{
+                    display: block;
+                    width: 100%;
+                    padding-left:10*@base;
+                    .pro_name{
+                        line-height: 25*@base;
+                        font-size: 12*@base;
+                        color:#666;
+                    }
+                }
+            }
+            .comment_text{
+                margin: 20*@base 10*@base;
+                padding: 10*@base;
+                border: 1px solid #ccc;
+                .message{
+                    font-size: 10*@base;
+                    line-height: 20*@base;
+                    .name{
+                        float: left;
+                        color:#1D4905;
+                    }
+                    .time{
+                        float: right;
+                        color:#666;
+                    }
+                }
+                .content{
+                    color:#000;
+                    line-height: 25*@base;
+                    font-size: 12*@base;
+                }
+            }
+        }
+    }       
+}

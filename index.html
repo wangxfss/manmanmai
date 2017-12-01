@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-首页</title>
+    <link rel="stylesheet" href="./less/index.css">
+</head>
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="#"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+<!-- 商品搜索 -->
+    <div class="buy_search">
+        <div class="container">
+            <input type="text" placeholder="请输入您想比价的商品">
+            <button>搜索</button>
+        </div>
+    </div>
+<!-- 产品展示 -->
+    <div class="nav">
+        <div class="container">
+            <ul class="clearfix">
+                <!-- 使用模板引擎 -->
+            </ul>
+        </div>
+    </div>
+<!-- 超值折扣推荐 -->
+
+<div class="buy_recommend">
+    <div class="rec_top">
+        <div class="container clearfix">
+            <span class="rec_top_txt">超值折扣推荐</span>
+            <span class="icon_left_box">
+                <i class="icon_left"></i>
+            </span>
+        </div>
+    </div>
+    <div class="rec_product">
+        <!-- 模板引擎 -->
+    </div>
+</div>
+<!-- 更多优惠信息 -->
+<div class="more_message">
+    <div class="container">
+        <button>更多优惠信息 >></button>
+    </div>
+</div>
+
+<!-- 底部 -->
+<footer class="buy_footer">
+    <div class="brand">
+        <div class="container clearfix">
+            <span class="rec_top_txt">品牌排行</span>
+            <i class="icon_left"></i>
+        </div>
+    </div>
+    <div class="footer_list">
+        <ul class="clearfix">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="mobile_download">
+        <p class="download_des">
+            <span>手机App下载</span>
+            <span>慢慢买手机版</span>
+            <span>--掌上比价平台</span>
+        </p>
+        <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+    </div>
+</footer>
+
+<!-- 菜单栏的模板引擎 -->
+<script type="text/html" id="menu_tpl1">
+    {{each result v i}}
+            <li>
+                <a  class="{{i==7?'btn_more':''}}" data-id="{{v._id}}" href="{{i==7?'javascript:;':v.titlehref}}">
+                    {{@v.img}}
+                    <p>{{v.name}}</p>
+                </a>
+            </li>
+    {{/each}}
+</script>
+
+<!-- 折扣列表的模板引擎 -->
+<script type="text/html" id="list_tpl">
+    {{each result v i}}
+        <div class="product_agu">
+            <div class="container clearfix">
+                <div class="pro_img">
+                    {{@v.productImg2}}
+                </div>
+                <div class="pro_des_box">
+                    <a class="pro_des" href="pennySaverDetail.html?productid={{v.productId}}">
+                        <p class="pro_name">{{v.productName}}</p>
+                        <p class="pro_size">{{v.productPinkage}}</p>
+                        <p class="pro_time">
+                            <span>{{v.productFrom}} |</span>
+                            <span>{{v.productTime}}</span>
+                            <span class="pro_num">
+                                <i class="icon_mes"></i>
+                                {{v.productComCount}}
+                            </span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/Route.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

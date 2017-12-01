@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-产品列表</title>
+    <link rel="stylesheet" href="./less/pennySaverDetail.css">
+</head>
+
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+            <div class="text">
+                <h2>国内折扣</h2>
+            </div>
+        </div>
+    </div>
+   
+    <!-- 主题部分 -->
+    <div class="productDetail">
+        <!-- 模板引擎 -->
+    </div>
+   
+
+
+
+    <!-- 底部 -->
+    <footer class="buy_footer">
+        <div class="footer_list">
+            <ul class="clearfix">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+                <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="mobile_download">
+            <p class="download_des">
+                <span>手机App下载</span>
+                <span>慢慢买手机版</span>
+                <span>--掌上比价平台</span>
+            </p>
+            <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 商品列表的模板引擎 -->
+    <script type="text/html" id="moneyctrl_tpl">
+       
+        <div class="detail_tpl">
+            <div class="pro_title">
+                <h1>{{result[0].productName}}</h1>
+            </div>
+            <div class="comment_detail">
+                <span>{{result[0].productFrom}}</span>
+                <span>{{result[0].productTime}}</span>
+                <span>{{result[0].productTips}}</span>
+            </div>
+            <div class="pro_detail">
+                <div class="pro_simg">
+                    {{@result[0].productImg2}}
+                </div>
+                <div class="pro_dec">
+                    <p>{{result[0].productInfo2}}</p>
+                </div>
+                
+            </div>
+            <div class="pro_stock">
+                <div class="pro_limg">
+                    {{@result[0].productImgSm}}
+                    <p></p>
+                </div>
+                <div class="pro_city"></div>
+            </div>
+        </div>
+        <div class="pro_buy">
+            <!-- 前往购买 -->
+            <div class="go_buy">
+                <button>前往购买</button>
+            </div>
+            <!-- 二维码 -->
+            <div class="qr_code">
+                <img src="./images/mmbweixin2.png" alt="">
+            </div>
+        </div>
+        <div class="pro_comment">
+            {{@result[0].productComment}}
+        </div>
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/Route.js"></script>
+    <script src="./js/pennySaverDetail.js"></script>
+</body>
+
+</html>

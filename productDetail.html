@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-商品详情功能界面</title>
+    <link rel="stylesheet" href="./less/productDetail.css">
+</head>
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+<!-- 商品搜索 -->
+    <div class="buy_search">
+        <div class="container">
+            <input type="text" placeholder="请输入您想比价的商品">
+            <button>搜索</button>
+        </div>
+    </div>
+
+<!-- 商品详细信息 -->
+    <div class="pro_detail_box">
+        <div class="list_title clearfix">
+            <div class="list_l">
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+                <a href="#" class="categoryName">电视></a>
+            </div>
+            <div class="list_r">
+                <button>筛选</button>
+            </div>
+        </div>
+        <div class="pro_detail">
+             <!-- 模板引擎 -->
+        </div>
+        <div class="assessmentCenter">
+           <!-- 模板引擎 -->
+        </div>
+    </div>
+
+
+
+<!-- 更多评价 -->
+<div class="more_message">
+    <div class="container">
+        <button>查看更多评价 >></button>
+    </div>
+</div>
+
+<!-- 底部 -->
+<footer class="buy_footer">
+    <div class="footer_list">
+        <ul class="clearfix">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="mobile_download">
+        <p class="download_des">
+            <span>手机App下载</span>
+            <span>慢慢买手机版</span>
+            <span>--掌上比价平台</span>
+        </p>
+        <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+    </div>
+</footer>
+
+<!-- 商品详情的模板引擎 -->
+<script type="text/html" id="detail_tpl">
+
+    <div class="pro_name">
+        <p>{{result[0].productName}}</p>
+    </div>
+    <div class="pro_img_box">
+        {{@result[0].productImg}}
+        <img src="./images/gengduo.png" alt="" class="icon_collect">
+    </div>
+    <div class="pro_list">
+        <ul class="clearfix">
+            <li><a href="javascript:;">比价购买</a></li>
+            <li><a href="javascript:;">产品参数</a></li>
+            <li><a href="javascript:;" class="productCom"></a></li>
+        </ul>
+        {{@result[0].bjShop}}
+        <div class="price_explain">*实际价格以个网站列出的实时售出为准，我们提供的价格可能有数小时至数日的延迟。</div>
+    </div>
+</script>
+
+<script type="text/html" id="comment_tpl">
+    
+    <div>
+         <div class="assessmentCenter_top">
+            <p>网友评价</p>
+        </div>
+        {{each result v i}}
+        <div class="per_article">
+            <div class="article_title">
+                <div class="clearfix">
+                    <p class="art_author">{{v.comName}}</p>
+                    <p class="art_time">{{v.comTime}}</p>
+                </div>
+                <p class="buy_address">{{v.comFrom}}</p>
+            </div>
+            <div class="article_content">{{v.comContent}}</div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/tools.js"></script>
+<script src="./js/Route.js"></script>
+<script src="./js/productDetail.js"></script>
+</body>
+</html>

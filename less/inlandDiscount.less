@@ -1,0 +1,54 @@
+@import "px2rem.less";
+@import "commen.less";
+
+.topbar{
+    .topbar_l{
+        a{
+            background: url('../images/back.png') no-repeat;
+            width: 22*@base;
+            height:22*@base;
+            background-size: 100%;
+        }
+    }
+    .text{
+        overflow: hidden;
+        h2{
+            color:#fff;
+            text-align: center;
+        }
+    }
+}
+.discountProduct{
+    background-color: #fff;
+    ul{
+        li{
+            width: 50%;
+            padding: 30*@base 20*@base 10*@base 20*@base;
+            float: left;
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            .pro_img{
+                img{
+                    width: 130*@base;
+                    height: 140*@base;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            .pro_dec{
+                padding-top: 5*@base;
+                line-height: 20*@base;
+                display: block;
+                color: #333;
+                .pro_price{
+                    color:#FF642A;
+                    font-size: 12*@base;
+                }
+                .pro_time{
+                    color:#88858B;
+                    font-size: 10*@base;
+                }
+            }
+        }
+    }
+}

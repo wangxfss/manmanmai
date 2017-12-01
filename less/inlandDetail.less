@@ -1,0 +1,194 @@
+@import "px2rem.less";
+@import "commen.less";
+
+.topbar{
+    .topbar_l{
+        a{
+            background: url('../images/back.png') no-repeat;
+            width: 22*@base;
+            height:22*@base;
+            background-size: 100%;
+        }
+    }
+    .text{
+        overflow: hidden;
+        h2{
+            color:#fff;
+            text-align: center;
+        }
+    }
+}
+.productDetail{
+    background-color: #fff;
+    padding: 20*@base 10*@base;
+    .detail_tpl{
+        .pro_title{
+            color:#333;
+            padding-bottom:10*@base;
+        }
+        .comment_detail{
+            line-height: 30*@base;
+            font-size: 10*@base;
+            color:#666;
+        }
+        .pro_detail{
+            .pro_dec{
+                overflow: hidden;
+                p{
+                    line-height: 30*@base;
+                    font-size: 12*@base;
+                    color:#333;
+                }
+            }
+            .pro_simg{
+                float: right;
+                img{
+                    height: 140*@base;
+                    width: 130*@base;
+                }
+            }
+        }
+        .pro_stock{
+             .pro_limg{
+                
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 175*@base;
+                    height: 175*@base;
+                } 
+            }
+            .pro_city{
+                #disstorck{
+                    width: 140*@base;
+                    margin: 0 auto;
+                    box-shadow: 0*@base 8*@base 8*@base rgba(136, 136, 136, .2);
+                    li{
+                        text-align: center;
+                        padding:0 10*@base;
+                        a{
+                            display: block;
+                            width: 100%;
+                            span{
+                                display: block;
+                                color: #333;
+                                font-size: 12*@base;
+                                text-align: left;
+                                border-bottom: 1px dashed #ccc;
+                                padding: 0 7*@base;
+                                line-height: 25*@base;
+                                strong{
+                                    color:#F3792E;
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .pro_buy{
+        width: 100%;
+        padding:10*@base;
+        background-color: #fff;
+        .go_buy{ 
+            button{
+                width: 100%;
+                height: 35*@base;
+                border: 1px solid #FF8A00;
+                background-color: #FF8722;
+                color: #fff;
+                border-radius: 5*@base;
+                font-size: 12*@base;
+                font-weight: 700;
+            }
+        }
+        .qr_code{
+            padding:10*@base;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: 166*@base;
+            }
+        }
+    }
+    .pro_comment{
+        padding: 20*@base 0;
+        
+            >.tit{
+                font-size: 12*@base;
+                line-height: 30*@base;
+            }
+            .reply{
+                padding:0 10*@base;
+                .form{
+                    position: relative;
+                    textarea{
+                        width: 100%;
+                        height: 112*@base;
+                        border-radius: 3*@base;
+                    }
+                    .ctrl{
+                        position: absolute;
+                        border-bottom-right-radius: 3*@base;
+                        border-bottom-left-radius: 3*@base;
+                        bottom:2.5*@base;
+                        width: 100%;
+                        height: 39*@base;
+                        background-color: #eee;
+                        border-top: 1px solid #ccc;
+                        [type="submit"]{
+                            height: 39*@base;
+                            background-color: #FF841D;
+                            border:1px solid #FF6A08;
+                            float: right;
+                            width: 100*@base;
+                            border-radius: 4*@base;
+                            color:#fff;
+                            font-size: 12*@base;
+                        }
+                    }
+                }
+            }
+        .list{
+            margin-top:20*@base;
+            ul{
+                li{
+                    .userimg{
+                        float: left;
+                        img{
+                            width: 42*@base;
+                            height: 42*@base;
+                            border-radius: 21*@base;
+                        }
+                    }
+                    .con{
+                        overflow: hidden;
+                        .name{
+                            width: 100%;
+                            padding:0 10*@base;
+                            font-size: 10*@base;
+                            line-height: 20*@base;
+                            .username{
+                                float: left;
+                                color:skyblue;
+                            }
+                            .time{
+                                float: right;
+                            }
+                        }
+                        .content{
+                            padding: 0 10*@base;
+                            line-height: 30*@base;
+                            font-size: 12*@base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 

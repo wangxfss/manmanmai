@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-品牌大全</title>
+    <link rel="stylesheet" href="./less/brandtitle.css">
+</head>
+
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品搜索 -->
+    <div class="buy_search">
+        <div class="container">
+            <input type="text" placeholder="请输入您想比价的商品">
+            <button>搜索</button>
+        </div>
+    </div>
+
+    <!-- 商品分类标题 -->
+    <div class="products">
+        <div class="list_title clearfix">
+            <div class="list_l">
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+            </div>
+        </div>
+        <div class="pro_items">
+            <p>热门品牌排行</p>
+        </div>
+        <div class="cat_title clearfix">
+            <!-- 模板引擎 -->
+           
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="buy_footer">
+        <div class="footer_list">
+            <ul class="clearfix">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+                <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="mobile_download">
+            <p class="download_des">
+                <span>手机App下载</span>
+                <span>慢慢买手机版</span>
+                <span>--掌上比价平台</span>
+            </p>
+            <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 商品列表的模板引擎 -->
+    <script type="text/html" id="brandtitle_tpl">
+        
+        <ul>
+            {{each result v i}}
+            <li>
+                <a href="brand.html?brandtitleid={{v.brandTitleId}}" class="list_title container">
+                    <span class="icon_down"></span>
+                    {{v.brandTitle}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>    
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/Route.js"></script>
+    <script src="./js/brandtitle.js"></script>
+</body>
+
+</html>

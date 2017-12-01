@@ -1,0 +1,79 @@
+@import "px2rem.less";
+@import "commen.less";
+
+.products{
+    background-color: #fff;
+    .list_title{
+        background-color: #eee;
+        padding: 0 20*@base;
+        border-top:1*@base solid #ccc;
+        border-bottom:1*@base solid #ccc;
+        .list_l{
+            float: left;
+            >a{
+                height: 39*@base;
+                display: inline-block;
+                color: #333;
+                line-height:39*@base;
+                font-family: 700; 
+            }
+        }
+        .list_r{
+            float:right;
+            padding:5*@base;
+            >button{
+                height: 29*@base;
+                width: 63*@base;
+                color: #333;
+                line-height:29*@base;
+                font-family: 700;
+                border: 1px solid #ccc;
+                border-radius: 5*@base;
+                outline: none;
+            }
+        }
+    }
+    .pro_items{
+        padding: 10*@base 5*@base;
+        p{
+            height: 40*@base;
+            line-height: 40*@base;
+            background-color: #eee;
+            font-size: 12*@base;
+            color:#7B2700;
+            padding-left: 10*@base;
+            border: 1px solid #ccc;
+        }
+    }
+    .cat_title{
+        ul{
+            li{ 
+                width: 100%;
+                .list_title{
+                    display: block;
+                    color:#333;
+                    width: 100%;
+                    height: 42*@base;
+                    border: 1px solid #ccc;
+                    background-color: #eee;
+                    border-radius: 5px;
+                    line-height: 42*@base;
+                    font-size: 14*@base;
+                    font-weight: 600;
+                    margin-left:-1*@base;
+                    position: relative;
+                    .icon_down{
+                        position: absolute;
+                        top:18*@base;
+                        right:20*@base;
+                        width: 13*@base;
+                        height: 6*@base; 
+                        background: url('../images/icon_bar.png') no-repeat -175*@base 0;
+                        background-size: 220*@base 132*@base;
+                    }
+                }
+            }  
+        }
+        
+    }        
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-白菜价</title>
+    <link rel="stylesheet" href="./less/baicai.css">
+</head>
+
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+            <div class="text">
+                <h2>白菜价-淘宝内部券</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主题部分 -->
+    <div class="baicaiDetail">
+        <!-- 模板引擎 -->
+        <div class="baicai_title">
+            <ul class="clearfix top_nav">
+                
+            </ul>
+        </div>
+        <div class="baicai_content">
+            
+        </div>
+    </div>
+
+
+
+
+    <!-- 底部 -->
+    <footer class="buy_footer">
+        <div class="footer_list">
+            <ul class="clearfix">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+                <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="mobile_download">
+            <p class="download_des">
+                <span>手机App下载</span>
+                <span>慢慢买手机版</span>
+                <span>--掌上比价平台</span>
+            </p>
+            <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 顶部导航栏-->
+    <script type="text/html" id="title_tpl">
+        {{each result v i}}
+        <li data-titleid="{{v.titleId}}"><a href="javascript:;" class="{{i==0?'active':''}}">{{v.title}}</a></li>
+        {{/each}}
+    </script>
+
+    <!-- 商品 -->
+    <script type="text/html" id="product_tpl">
+        {{each result v i}}
+        <div class="product_agu">
+            <div class="container clearfix">
+                <div class="pro_img">
+                    {{@v.productImg}}
+                </div>
+                <div class="pro_des">
+                    <div class="pro_des_box">
+                        <p class="pro_name">{{@v.productName}}</p>
+                        <p class="pro_price">{{@v.productPrice}}</p>
+                        {{@v.productCouponRemain}}
+                        {{@v.productCoupon}}
+                        {{@v.productHref}}
+                     </div>    
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/Route.js"></script>
+    <script src="./js/baicai.js"></script>
+</body>
+
+</html>

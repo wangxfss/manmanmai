@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <script src="./lib/build/flexible.debug.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <title>慢慢买-品牌大全产品列表</title>
+    <link rel="stylesheet" href="./less/brand.css">
+</head>
+
+<body>
+    <!-- 顶部banner -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar_l">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="topbar_r">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品搜索 -->
+    <div class="buy_search">
+        <div class="container">
+            <input type="text" placeholder="请输入您想比价的商品">
+            <button>搜索</button>
+        </div>
+    </div>
+
+    <!-- 商品分类标题 -->
+    <div class="products">
+        <div class="list_title clearfix">
+            <div class="list_l">
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+            </div>
+        </div>
+        <div class="pro_items">
+            <p>平板电视那个牌子好</p>
+        </div>
+        <div class="pro_list clearfix">
+            <!-- 模板引擎 -->
+           <div class="pro_des clearfix">
+                <div class="describe_l">
+                    <p>1</p>
+                </div>
+                <div class="describe_r">
+                    <div class="describe_r_box">
+                        <p class="describe_title">三星平板</p>
+                        <p class="describe_xl">30天</p>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <!-- 销量排行-->
+
+    <div class="products">
+        <div class="pro_items">
+            <p>平板电视产品销量排行</p>
+        </div>
+        <div class="hot_products">
+                <!-- 模板引擎 -->
+            <div class="pro_hot clearfix">
+                
+            </div>
+        </div>
+    </div>    
+
+    <!-- 平板电视最新评论 -->
+    <div class="products">
+        <div class="pro_items">
+            <p>平板电视最新评论</p>
+        </div>
+        <div class="comment_products">
+            <!-- 模板引擎 -->
+            <div class="new_comment clearfix">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="buy_footer">
+        <div class="footer_list">
+            <ul class="clearfix">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+                <li><a href=""><i class="go_top"></i>返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="mobile_download">
+            <p class="download_des">
+                <span>手机App下载</span>
+                <span>慢慢买手机版</span>
+                <span>--掌上比价平台</span>
+            </p>
+            <a href="m.manmanbuy.com" class="mobile_address">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 商品列表的模板引擎 -->
+    <script type="text/html" id="brand_tpl">
+        {{each result v i}}   
+            <div class="pro_des clearfix">
+                <div class="describe_l">
+                    <p>1</p>
+                </div>
+                <div class="describe_r">
+                    <div class="describe_r_box">
+                        <p class="describe_title">{{v.brandName}}</p>
+                        <p class="describe_xl">{{v.brandInfo}}</p>
+                    </div>
+                </div>
+           </div>
+        {{/each}}
+    </script>
+
+    <!-- 热销商品的模板引擎 -->
+    <script type="text/html" id="proHot_tpl">
+        {{each result v i}}
+        <div class="pro_hot clearfix">
+            <div class="container clearfix">
+                <div class="pro_img">
+                    {{@v.productImg}}
+                </div>
+                <div class="pro_des">
+                    <a href="javascript:;">
+                        <h3 class="pro_name">{{v.productName}}</h3>
+                        <p class="pro_price">{{v.productPrice}}</p>
+                        <p class="pro_time">
+                            <span>{{v.productQuote}} </span>
+                            <span>{{v.productCom}}</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- 最新评论 -->
+    <script type="text/html" id="comment_tpl">
+        
+        {{each result v i}}
+        <div class="pro_com clearfix">
+            <div class="container clearfix">
+                <div class="pro_img"></div>
+                <div class="pro_des">
+                    <a href="javascript:;">
+                        <h3 class="pro_name"></h3>
+                    </a>
+                </div>
+            </div>
+            <div class="comment_text">
+                <p class="message clearfix">
+                    <span class="name">{{v.comName}}：</span>
+                    <span class="time">{{v.comTime}}</span>
+                </p>
+                <p class="content">{{v.comContent}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/Route.js"></script>
+    <script src="./js/brand.js"></script>
+</body>
+
+</html>

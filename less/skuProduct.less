@@ -1,0 +1,119 @@
+@import "px2rem.less";
+@import "commen.less";
+.topbar{
+    .topbar_l{
+        a{
+            background: url('../images/back.png') no-repeat;
+            width: 22*@base;
+            height:22*@base;
+            background-size: 100%;
+        }
+    }
+    .text{
+        overflow: hidden;
+        h2{
+            color:#fff;
+            text-align: center;
+        }
+    }
+}
+
+.discountProduct{
+    background-color: #fff;
+     position: relative;
+    .top_nav{
+        border-bottom:1*@base solid #ccc;
+       .nav_box{
+           width: 89%;
+           >li{
+               float: left;
+               width: 33.33%;
+                >a{
+                    display: block;
+                    text-align: center;
+                    height: 25*@base;
+                    line-height: 25*@base;
+                    font-size: 10*@base;
+                    color: #666;
+                }
+           }
+       }
+    }
+    .icon_search{
+        width: 11%;
+        height: 25*@base;
+        position: absolute;
+        top: 0*@base;
+        right: 0*@base;
+        border-left:1px solid #ccc;
+    }
+    .list{
+        width: 100%;
+        display: none;
+        ul{
+            li{
+                width: 100%;
+                border-bottom: 1px solid #ccc;
+                a{
+                    display: block;
+                    height: 30*@base;
+                    line-height: 30*@base;
+                    color: #333;
+                    padding-left:10*@base;
+                    font-size: 10*@base;
+                }
+            }
+        }
+    }
+   .pro_box{
+       background-color: #eee;
+       padding: 10*@base;
+        ul{
+            li{
+                background-color: #fff;
+                width: 49%;
+                padding: 30*@base 20*@base 10*@base 20*@base;
+                float: left;
+                margin-bottom: 10*@base;
+                &:nth-child(2n){
+                    float: right;
+                }
+                .pro_img{
+                    img{
+                        width: 130*@base;
+                        height: 140*@base;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .pro_dec{
+                    padding-top: 5*@base;
+                   
+                    display: block;
+                    color: #333;
+                    .pro_name{
+                        width: 100%;
+                        overflow: hidden;
+                        height: 20*@base;
+                        line-height:  20*@base;
+                    }
+                    .pro_price{
+                        color:#FF642A;
+                        font-size: 12*@base;
+                         line-height: 20*@base;
+                    }
+                    .go_btn{
+                        float: right;
+                        background-color: #FF9501;
+                        border: 1px solid #FF642A;
+                        color: #fff;
+                        height: 20*@base;
+                        width: 50*@base;
+                        border-radius: 5*@base;
+                        font-size: 8@base;
+                    }
+                }
+            }
+        }
+   }
+}

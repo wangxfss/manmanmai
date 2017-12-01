@@ -1,0 +1,55 @@
+@import "px2rem.less";
+@import "commen.less";
+body,html{
+    background-color: #fff;
+}
+.cat_title{
+    margin-bottom: 20px;
+    .cat_title_first{
+        >li{
+            
+            .list_title{
+                height: 42*@base;
+                border: 1px solid #ccc;
+                background-color: #eee;
+                border-radius: 5px;
+                line-height: 42*@base;
+                font-size: 14*@base;
+                font-weight: 600;
+                margin-left:-1*@base;
+                position: relative;
+                .icon_down{
+                    position: absolute;
+                    top:18*@base;
+                    right:20*@base;
+                    width: 13*@base;
+                    height: 6*@base; 
+                    background: url('../images/icon_bar.png') no-repeat -175*@base 0;
+                    background-size: 220*@base 132*@base;
+                }
+            }
+            
+            .cat_title_second{
+                display: none;
+                background-color: #F9F9F9;
+                >li{
+                    float: left;
+                    width: 33.3334%;
+                    border: 1px solid #ccc;
+                    border-left:none;
+                    line-height: 42*@base;
+                    margin-top:-1*@base;
+                    text-align: center;
+                    >a{
+                        display: block;
+                        height: 42*@base; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buy_footer{
+    background-color: #eee;
+}

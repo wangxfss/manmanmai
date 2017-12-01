@@ -1,0 +1,107 @@
+@import "px2rem.less";
+@import "commen.less";
+.topbar{
+    .topbar_l{
+        a{
+            background: url('../images/back.png') no-repeat;
+            width: 22*@base;
+            height:22*@base;
+            background-size: 100%;
+        }
+    }
+    .text{
+        overflow: hidden;
+        h2{
+            color:#fff;
+            text-align: center;
+        }
+    }
+}
+
+.moneyctrl{
+    .product_agu{
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+        .pro_img{
+        float: left;
+        width: 80*@base;
+        height: 80*@base;
+        img{
+            width: 80*@base;
+            height: 80*@base;
+            display: block;
+        }
+        }
+        .pro_des{
+            overflow: hidden;
+            >a{
+                display: block;
+                width: 100%;
+                padding-left:10*@base;
+                .pro_name{
+                    line-height: 25*@base;
+                    font-size: 12*@base;
+                     .pro_size{
+                        margin: 10*@base 0;
+                        color:#FF7B05;
+                    }
+                }
+               
+                .pro_time{
+                    color: #666;
+                    height: 30*@base;
+                    position: relative;
+                    line-height: 25*@base;
+                    .pro_num{
+                        float: right;
+                        position: absolute;
+                        bottom: -3*@base;
+                        right: 0*@base;
+                        i{
+                            display: block;
+                            margin: 0 auto;
+                            width: 24*@base;
+                            height: 22*@base;
+                            background: url('../images/icon_bar.png') no-repeat -97*@base -52*@base;
+                            background-size: 217*@base 125*@base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+.moneyctrl_page{
+    .pro_page{
+        padding: 10*@base;
+        position: relative;
+        button{
+            height: 35*@base;
+            width: 83*@base;
+            border-radius: 5px;
+            border:none;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        .page_prve{
+            float: left;
+        }
+        .page_list{
+            position: absolute;
+            top: 10*@base;
+            left:50%;
+            transform: translate(-50%);
+            height: 35*@base;
+            width: 83*@base;
+            border-radius: 5*@base;
+            padding:8*@base 10*@base 8*@base 23*@base;
+            option{
+                text-align: center;
+            }
+        }
+        .page_next{
+            float: right;
+        }
+    }
+}

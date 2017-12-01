@@ -1,0 +1,96 @@
+@import "px2rem.less";
+@import "commen.less";
+
+.products{
+    background-color: #fff;
+    .list_title{
+        background-color: #eee;
+        padding: 0 20*@base;
+        border-top:1*@base solid #ccc;
+        border-bottom:1*@base solid #ccc;
+        .list_l{
+            float: left;
+            >a{
+                height: 39*@base;
+                display: inline-block;
+                color: #333;
+                line-height:39*@base;
+                font-family: 700; 
+            }
+        }
+        .list_r{
+            float:right;
+            padding:5*@base;
+            >button{
+                height: 29*@base;
+                width: 63*@base;
+                color: #333;
+                line-height:29*@base;
+                font-family: 700;
+                border: 1px solid #ccc;
+                border-radius: 5*@base;
+                outline: none;
+            }
+        }
+    }
+    .pro_list{
+        padding: 10*@base;
+        border-bottom: 1px solid #ccc;
+        .img_box{
+            float: left;
+            img{
+                width: 100*@base;
+                height: 100*@base;
+                display: block;
+            }
+        }
+        .content_box{
+            padding: 0 10*@base;
+            overflow: hidden;
+            .pro_box_r{
+                width: 100%;
+                font-family: '微软雅黑';
+                font-size: 12*@base;
+                line-height: 25*@base;
+                .pro_name{
+                    color: #000; 
+                }
+                .pro_price{
+                    color:red;
+                }
+                .pro_say{
+                    font-size: 10*@base;
+                    color:#666;
+                }
+            }
+        }
+    }
+    .pro_page{
+        padding: 10*@base;
+        position: relative;
+        button{
+            height: 35*@base;
+            width: 83*@base;
+            border-radius: 5px;
+            border:none;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        .page_prve{
+            float: left;
+        }
+        .page_list{
+            position: absolute;
+            top: 10*@base;
+            left:50%;
+            transform: translate(-50%);
+            height: 35*@base;
+            width: 83*@base;
+            border-radius: 5*@base;
+            padding:8*@base 25*@base;
+        }
+        .page_next{
+            float: right;
+        }
+    }
+}
